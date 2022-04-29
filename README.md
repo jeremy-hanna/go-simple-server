@@ -1,3 +1,9 @@
 # simple-server
 
-This is a simple http server in go highlighting the stdlib implm]ementation.
+This is a simple http server in go highlighting the stdlib implmementation for
+learning purposes.
+
+- basic get handler
+- accept a param
+- pull param from url (needs gin ?)
+- handle TLS
