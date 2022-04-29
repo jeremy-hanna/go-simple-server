@@ -7,10 +7,18 @@ import (
 )
 
 func main() {
-	handler := func(w http.ResponseWriter, req *http.Request) {
-		io.WriteString(w, "Hello, world!\n")
-	}
+	mux := simpleMux()
+	mux.HandleFunc("/hello", simpleHandler)
+	// nil uses the DefaultServeMux
+	log.Fatal(http.ListenAndServe(":7896", mux))
+}
 
-	http.HandleFunc("/hello", handler)
-	log.Fatal(http.ListenAndServe(":7896", nil))
+func simpleHandler(w http.ResponseWriter, req *http.Request) {
+	w.Header().Set("Content-Type", "text/plain")
+	io.WriteString(w, "Hello, world!\n")
+}
+
+func simpleMux() *http.ServeMux {
+	m := http.NewServeMux()
+	return m
 }
