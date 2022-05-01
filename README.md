@@ -5,5 +5,5 @@ learning purposes.
 
 - basic get handler
 - accept a param
-- pull param from url (needs gin ?)
+- pull param from url
 - handle TLS
