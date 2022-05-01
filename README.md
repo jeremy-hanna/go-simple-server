@@ -3,7 +3,8 @@
 This is a simple http server in go highlighting the stdlib implmementation for
 learning purposes.
 
-- basic get handler
-- accept a param
-- pull param from url
-- handle TLS
+## TODO:
+- [x] basic get handler
+- [x] accept a param
+- [x] pull param from url
+- [ ] handle TLS
